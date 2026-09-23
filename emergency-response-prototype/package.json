@@ -1,0 +1,25 @@
+{
+    "name": "emergency-sos-prototype",
+    "version": "1.0.0",
+    "description": "Emergency Response & Hospital Ambulance Dispatch Prototype",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "dev": "node --watch server/server.js",
+        "client": "npm --prefix client run dev"
+    },
+    "keywords": [
+        "emergency",
+        "sos",
+        "healthtech",
+        "ambulance",
+        "dispatch"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^18.0.3",
+        "express": "^4.19.2"
+    }
+}

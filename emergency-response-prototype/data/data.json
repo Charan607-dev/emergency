@@ -1,0 +1,95 @@
+{
+  "hospitals": [
+    {
+      "hospital_id": "hosp_01",
+      "name": "City Care Hospital",
+      "address": "MG Road, Indiranagar"
+    }
+  ],
+  "ambulances": [
+    {
+      "ambulance_id": "amb_101",
+      "hospital_id": "hosp_01",
+      "vehicle_number": "KA-01-EQ-1234",
+      "driver_name": "Ramesh Kumar",
+      "driver_phone": "9876543210",
+      "status": "AVAILABLE"
+    },
+    {
+      "ambulance_id": "amb_102",
+      "hospital_id": "hosp_01",
+      "vehicle_number": "KA-01-EQ-5678",
+      "driver_name": "Suresh Roy",
+      "driver_phone": "9876543211",
+      "status": "AVAILABLE"
+    }
+  ],
+  "sos_requests": [
+    {
+      "request_id": "req_1790152854080",
+      "user_name": "S Charan Raj",
+      "user_phone": "8618804611",
+      "hospital_id": "hosp_01",
+      "assigned_ambulance_id": "amb_101",
+      "latitude": 13.067802855225716,
+      "longitude": 77.50528631793438,
+      "status": "COMPLETED",
+      "created_at": "2026-09-23T08:40:54.080Z"
+    },
+    {
+      "request_id": "req_1790152901177",
+      "user_name": "Arun Kumar",
+      "user_phone": "9876543210",
+      "hospital_id": "hosp_01",
+      "assigned_ambulance_id": "amb_102",
+      "latitude": 13.067745715047602,
+      "longitude": 77.50520071629171,
+      "status": "COMPLETED",
+      "created_at": "2026-09-23T08:41:41.178Z"
+    },
+    {
+      "request_id": "req_1790157244518",
+      "user_name": "Arun Kumar",
+      "user_phone": "9876543210",
+      "hospital_id": "hosp_01",
+      "assigned_ambulance_id": "amb_101",
+      "latitude": 13.067579188496971,
+      "longitude": 77.50586578545054,
+      "status": "COMPLETED",
+      "created_at": "2026-09-23T09:54:04.518Z"
+    },
+    {
+      "request_id": "req_1790158197834",
+      "user_name": "charan",
+      "user_phone": "95848454545",
+      "hospital_id": "hosp_01",
+      "assigned_ambulance_id": "amb_102",
+      "latitude": 13.067370995708307,
+      "longitude": 77.50549641104242,
+      "status": "COMPLETED",
+      "created_at": "2026-09-23T10:09:57.834Z"
+    },
+    {
+      "request_id": "req_1790158311580",
+      "user_name": "Arun Kumar",
+      "user_phone": "9876543210",
+      "hospital_id": "hosp_01",
+      "assigned_ambulance_id": "amb_101",
+      "latitude": 13.067712299606995,
+      "longitude": 77.50511320358595,
+      "status": "COMPLETED",
+      "created_at": "2026-09-23T10:11:51.580Z"
+    },
+    {
+      "request_id": "req_1790158366727",
+      "user_name": "Arun Kumar",
+      "user_phone": "9876543210",
+      "hospital_id": "hosp_01",
+      "assigned_ambulance_id": "amb_102",
+      "latitude": 13.067741756401492,
+      "longitude": 77.50503045242334,
+      "status": "COMPLETED",
+      "created_at": "2026-09-23T10:12:46.727Z"
+    }
+  ]
+}

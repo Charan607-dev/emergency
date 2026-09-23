@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #0f172a;
+    margin-bottom: 0.2rem;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+}
+
+.driver-select {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.driver-select label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.3rem;
+}
+
+.driver-select select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.status-box {
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.status-box.available {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-box.dispatched {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.available .dot {
+    background: #22c55e;
+}
+
+.dispatched .dot {
+    background: #ef4444;
+}
+
+.assignment-card {
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.assignment-card h3 {
+    color: #9f1239;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.assignment-card p {
+    font-size: 0.85rem;
+    color: #881337;
+    margin-bottom: 0.4rem;
+}
+
+.complete-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.complete-btn:hover {
+    background: #15803d;
+}
+
+.hidden {
+    display: none !important;
+}
