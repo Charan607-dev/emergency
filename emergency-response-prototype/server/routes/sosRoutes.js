@@ -78,4 +78,50 @@ router.post('/complete', (req, res) => {
     });
 });
 
-module.exports = router;
+// ====================================================================
+// 4. GET SOS STATUS & ASSIGNED AMBULANCE DRIVER DETAILS
+// GET /api/sos/status/:request_id
+// ====================================================================
+router.get('/status/:request_id', (req, res) => {
+    const { request_id } = req.params;
+    const db = readData();
+
+    const sos = db.sos_requests.find(r => r.request_id === request_id);
+    if (!sos) {
+        return res.status(404).json({ success: false, message: "Request not found" });
+    }
+
+    let ambulanceDetails = null;
+    if (sos.assigned_ambulance_id) {
+        ambulanceDetails = db.ambulances.find(a => a.ambulance_id === sos.assigned_ambulance_id) || null;
+    }
+
+    res.status(200).json({
+        success: true,
+        data: {
+            ...sos,
+            ambulance: ambulanceDetails
+        }
+    });
+});
+
+// ====================================================================
+// 5. GET ACTIVE DISPATCH FOR AN AMBULANCE
+// GET /api/sos/driver/active/:ambulance_id
+// ====================================================================
+router.get('/driver/active/:ambulance_id', (req, res) => {
+    const { ambulance_id } = req.params;
+    const db = readData();
+
+    const activeReq = db.sos_requests.find(
+        r => r.assigned_ambulance_id === ambulance_id && r.status === "ASSIGNED"
+    );
+
+    res.status(200).json({
+        success: true,
+        data: activeReq || null
+    });
+});
+
+module.exports = router;
+

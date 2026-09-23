@@ -43,20 +43,21 @@ emergency-response-prototype/
 │   │   └── hospitalRoutes.js       # Endpoints: /api/hospital/:id/alerts, /api/hospital/:id/ambulances
 │   └── server.js                   # Express application entry point
 │
-├── public/
-│   ├── user/                       # User / Victim Side (Mobile-friendly web app)
-│   │   ├── index.html              # SOS button interface
-│   │   ├── style.css               # Clean, urgent mobile styles
-│   │   └── app.js                  # Geolocation handling & status polling
-│   │
-│   └── hospital/                   # Hospital Dashboard Side (Admin web app)
-│       ├── index.html              # Incoming alerts & ambulance dispatch UI
-│       ├── style.css               # Responsive dashboard layout
-│       └── dashboard.js            # Alerts polling & ambulance assignment logic
+├── client/                         # Unified React (Vite) Frontend App
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── UserSOS.jsx         # Citizen Emergency Trigger Screen
+│   │   │   ├── HospitalDashboard.jsx # Dispatch & Fleet Control Screen
+│   │   │   └── DriverTerminal.jsx  # Driver Telematics & Status Screen
+│   │   ├── App.jsx                 # Top Nav & Screen Switcher
+│   │   ├── index.css               # Modern Glassmorphic Design System
+│   │   └── main.jsx                # React Entry Point
+│   ├── package.json                # React Dependencies
+│   └── vite.config.js              # Vite Config with API Proxy
 │
 ├── .env                            # Environment variables (API keys, Port) [Ignored by Git]
 ├── .gitignore                      # Git ignore rules (node_modules, .env, logs)
-├── package.json                    # Project dependencies & scripts
+├── package.json                    # Root Project dependencies & scripts
 └── README.md                       # Documentation & setup guide
 ```
 
